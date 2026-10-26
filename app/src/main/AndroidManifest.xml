@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — Version 3
+
+    CHANGEMENTS vs V2 :
+      - LoginActivity devient l'activité de LANCEMENT (intent-filter MAIN)
+      - RegisterActivity ajoutée
+      - HabitListActivity n'est plus le launcher
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HabitBreaker">
+
+        <!-- ✅ NOUVEAU : LoginActivity est maintenant le point d'entrée -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/titre_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ NOUVEAU : RegisterActivity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="@string/titre_register" />
+
+        <!-- Liste principale (accessible après connexion) -->
+        <activity
+            android:name=".HabitListActivity"
+            android:exported="false"
+            android:label="@string/titre_liste" />
+
+        <!-- Ajouter une habitude -->
+        <activity
+            android:name=".AddHabitActivity"
+            android:exported="false"
+            android:label="@string/titre_ajouter" />
+
+        <!-- Détail d'une habitude -->
+        <activity
+            android:name=".HabitDetailActivity"
+            android:exported="false"
+            android:label="@string/titre_detail" />
+
+        <!-- Statistiques -->
+        <activity
+            android:name=".StatsActivity"
+            android:exported="false"
+            android:label="@string/titre_stats" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LAYOUT : activity_habit_detail.xml
+    Détail d'une habitude — streak, progression, boutons d'action.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="30dp">
+
+        <!-- Nom de l'habitude -->
+        <TextView
+            android:id="@+id/textNomHabitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom de l'habitude"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Carte : Statistiques -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Statistiques"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Streak actuel -->
+                <TextView
+                    android:id="@+id/textStreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔥 Streak : 0 jour"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Meilleur streak -->
+                <TextView
+                    android:id="@+id/textMeilleureStreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ Meilleur streak : 0 jour(s)"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Rechutes -->
+                <TextView
+                    android:id="@+id/textRechutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="❌ Rechutes : 0"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- ProgressBar -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressTint="#1A237E"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Label progression -->
+                <TextView
+                    android:id="@+id/textProgression"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎯 Objectif : 0 / 7 jours (0%)"
+                    android:textSize="14sp"
+                    android:textColor="#424242"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Message de motivation (caché par défaut) -->
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:padding="14dp"
+            android:background="#E8EAF6"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- Carte : Actions -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ Actions du jour"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Bouton : J'ai résisté -->
+                <Button
+                    android:id="@+id/boutonResiste"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✅ J'ai résisté aujourd'hui !"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#2E7D32"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Bouton : J'ai craqué -->
+                <Button
+                    android:id="@+id/boutonEchoue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="😔 J'ai craqué..."
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#C62828"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Bouton : Réinitialiser rechutes -->
+                <Button
+                    android:id="@+id/boutonReinitialiser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔄 Réinitialiser les rechutes"
+                    android:textSize="14sp"
+                    android:textColor="#757575"
+                    android:backgroundTint="#E0E0E0"
+                    android:padding="12dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bouton Retour -->
+        <Button
+            android:id="@+id/boutonRetour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="← Retour à la liste"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#37474F"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+</ScrollView>

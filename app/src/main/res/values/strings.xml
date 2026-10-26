@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nom de l'application -->
+    <string name="app_name">HabitBreaker</string>
+
+    <!-- Titres des activités (affichés dans la barre Android) -->
+    <string name="titre_login">Connexion</string>
+    <string name="titre_register">Créer un compte</string>
+    <string name="titre_liste">Mes Habitudes</string>
+    <string name="titre_ajouter">Nouvelle Habitude</string>
+    <string name="titre_detail">Détail Habitude</string>
+    <string name="titre_stats">Statistiques</string>
+
+    <!-- Messages généraux -->
+    <string name="erreur_champ_vide">Ce champ est obligatoire.</string>
+    <string name="erreur_identifiants">Nom d\'utilisateur ou mot de passe incorrect.</string>
+    <string name="succes_inscription">Compte créé avec succès !</string>
+    <string name="habitude_supprimee">Habitude supprimée.</string>
+</resources>

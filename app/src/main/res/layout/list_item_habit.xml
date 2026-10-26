@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LAYOUT : list_item_habit.xml
+    Une ligne dans la ListView des habitudes.
+    Utilise une CardView pour un look moderne.
+-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nom de l'habitude -->
+        <TextView
+            android:id="@+id/itemNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom de l'habitude"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Streak avec couleur dynamique -->
+        <TextView
+            android:id="@+id/itemStreak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔥 Streak : 0 jour"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- ProgressBar vers l'objectif -->
+        <ProgressBar
+            android:id="@+id/itemProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#1A237E"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Ligne inférieure : objectif + rechutes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Progression jours -->
+            <TextView
+                android:id="@+id/itemObjectif"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 / 7 jours"
+                android:textSize="12sp"
+                android:textColor="#757575" />
+
+            <!-- Rechutes -->
+            <TextView
+                android:id="@+id/itemRechutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ Rechutes : 0"
+                android:textSize="12sp"
+                android:textColor="#C62828" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

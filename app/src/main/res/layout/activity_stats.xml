@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LAYOUT : activity_stats.xml
+    Écran de statistiques globales.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="30dp">
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Mes Statistiques"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Carte statistiques -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/statsTotalHabitudes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📋 Habitudes suivies : 0"
+                    android:textSize="17sp"
+                    android:textColor="#1A237E"
+                    android:layout_marginBottom="14dp"
+                    android:padding="12dp"
+                    android:background="#E8EAF6" />
+
+                <TextView
+                    android:id="@+id/statsMeilleurStreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏆 Meilleur streak : 0 jour(s)"
+                    android:textSize="17sp"
+                    android:textColor="#2E7D32"
+                    android:layout_marginBottom="14dp"
+                    android:padding="12dp"
+                    android:background="#E8F5E9" />
+
+                <TextView
+                    android:id="@+id/statsChampion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🥇 Champion : Aucune"
+                    android:textSize="17sp"
+                    android:textColor="#E65100"
+                    android:layout_marginBottom="14dp"
+                    android:padding="12dp"
+                    android:background="#FFF3E0" />
+
+                <TextView
+                    android:id="@+id/statsTotalRechutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="❌ Total rechutes : 0"
+                    android:textSize="17sp"
+                    android:textColor="#C62828"
+                    android:layout_marginBottom="14dp"
+                    android:padding="12dp"
+                    android:background="#FFEBEE" />
+
+                <TextView
+                    android:id="@+id/statsObjectifsAtteints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎯 Objectifs atteints : 0 / 0"
+                    android:textSize="17sp"
+                    android:textColor="#4527A0"
+                    android:padding="12dp"
+                    android:background="#EDE7F6" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Message d'encouragement -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/statsEncouragement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💪 Continuez comme ça !"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:textColor="#1A237E"
+                android:gravity="center"
+                android:padding="24dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bouton Retour -->
+        <Button
+            android:id="@+id/statsRetour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="← Retour"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#37474F"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>

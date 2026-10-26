@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Thème principal de l'application.
+        Basé sur Material Design avec couleur primaire bleue indigo.
+        NoActionBar → on gère notre propre en-tête dans chaque layout.
+    -->
+    <style name="Theme.HabitBreaker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Couleur principale (boutons, liens) -->
+        <item name="colorPrimary">#1A237E</item>
+        <!-- Couleur variante (plus foncée) -->
+        <item name="colorPrimaryVariant">#0D1B6E</item>
+        <!-- Couleur des textes sur fond primaire -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Couleur d'accentuation -->
+        <item name="colorSecondary">#4527A0</item>
+        <item name="colorSecondaryVariant">#311B92</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <!-- Fond de l'app -->
+        <item name="android:colorBackground">#F5F5F5</item>
+        <!-- Couleur de la barre de statut -->
+        <item name="android:statusBarColor">#0D1B6E</item>
+    </style>
+</resources>
